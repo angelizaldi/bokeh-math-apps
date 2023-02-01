@@ -10,14 +10,11 @@ BLACK = "#000000"
 GRAY = "#7b7d7d"
 
 # Figura
+dominio = (-7, 7)
+rango = (-3, 3)
 
-angulos = np.linspace(-6, 6, 200)
-
-dominio = np.cos(angulos)
-rango = np.sin(angulos)
-
-plot = figure(height=475, width=475, title="",
-              tools="", x_range=(-7, 7), y_range=(-3, 3),
+plot = figure(height=475, width=760, title="",
+              tools="", x_range=dominio, y_range=rango,
               toolbar_location=None, match_aspect=True)
 
 plot.xaxis.fixed_location = 0
@@ -41,13 +38,6 @@ plot.add_layout(etq_x)
 
 # Label
 texto = Div(text="y = sin (x)", width=200)
-
-#label = Label(
-#    text=r"y=$$\sin(x)\$$",
-#    x=2, y=2,
-#    x_units="data", y_units="data"
-#)
-#plot.add_layout(label)
 
 # Título
 titulo = Div(text="""<h1 style="text-align: center; font-family: Sans-serif, Serif; font-weight: 300;
@@ -225,15 +215,23 @@ limpiar = CustomJS(args=dict(source=source,
                               texto=texto),
                     code="""
 function makeArr(startValue, stopValue, cardinality) {
-        var arr = [];
-        var step = (stopValue - startValue) / (cardinality - 1);
-        for (var i = 0; i < cardinality; i++) {
-            arr.push(startValue + (step * i));
-        }
-        return arr;
+    var arr = [];
+    var step = (stopValue - startValue) / (cardinality - 1);
+    for (var i = 0; i < cardinality; i++) {
+        arr.push(startValue + (step * i));
     }
-    
-seleccionar.value = "sin(x)";
+    return arr;
+}
+
+function evaluateFun(val, fun) {
+    if (fun === "sin(x)") {
+    return Math.sin(val);
+    } else if (fun === "x^2") {
+    return val ** 2;
+    } else if (fun === "x^3") {
+    return val ** 3;
+    }
+}
 
 reflexiones.active = [];
 
@@ -244,11 +242,13 @@ compresion_h.value = 1;
 dilatacion_v.value = 1;
 compresion_v.value = 1;
 
+const fun = seleccionar.value
+
 const x_dom = makeArr(-6, 6, 200);
-const y = Array.from(x_dom, (x) => Math.sin(x));
+const y = Array.from(x_dom, (x) => evaluateFun(x, fun));
 
 // Make changes
-label.text = "$$y = \\sin(x)\$$";
+label.text = $`{fun}`;
 source.data = { x: x_dom, y: y };          
 """
 )
