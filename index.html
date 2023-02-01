@@ -10,7 +10,7 @@
     />
     <meta name="generator" content="Hugo 0.84.0" />
     <title>Bokeh Apps</title>
-
+    <link rel="shortcut icon" href="images/favicon.ico"/>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.0/examples/album/"
@@ -117,8 +117,7 @@
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">Bokeh Apps</h1>
             <p class="lead text-muted">
-              Colección de gráficos interactivos desarrollados para el sitio
-              "Nebok-Math", elaborados con la librería Bokeh
+              Colección de gráficos interactivos para visualizar conceptos matemáticos hechos con la librería Bokeh en Python. Esta página está en constante desarrollo.
             </p>
           </div>
         </div>
@@ -137,9 +136,9 @@
             <button
               type="button"
               class="btn btn-sm btn-dark"
-              onclick="filterObjects('linalg')"
+              onclick="filterObjects('trig')"
             >
-              Linear Algebra
+              Trigonometry
             </button>
             <button
               type="button"
@@ -148,16 +147,10 @@
             >
               Calculus
             </button>
-            <button
-              type="button"
-              class="btn btn-sm btn-dark"
-              onclick="filterObjects('prob')"
-            >
-              Probability
-            </button>
           </p>
+
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col otros">
+            <div class="col trig">
               <div class="card shadow-sm">
                 <img
                   class="bd-placeholder-img card-img-top"
@@ -166,7 +159,7 @@
                   width="100%"
                 />
                 <div class="card-body">
-                  <p class="card-text">Circulo trigonométrico.</p>
+                  <p class="card-text"><b>Circulo trigonométrico.</b> <br> Visualización de cómo se forman las funciones seno y conseno a partir de un círculo unitario.</p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -190,7 +183,7 @@
                   width="100%"
                 />
                 <div class="card-body">
-                  <p class="card-text">Sumas de Riemann.</p>
+                  <p class="card-text"><b>Sumas de Riemann.</b> <br> Visualización de la suma de Riemann para aproximar el área que generan una curva. <br><br> </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -214,13 +207,37 @@
                   width="100%"
                 />
                 <div class="card-body">
-                  <p class="card-text">Derivada de una función.</p>
+                  <p class="card-text"><b>Derivada de una función.</b> <br> Visualización del concepto de derivada para aproximar la pendiente de una recta tangente en un punto dado de una curva.</p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
                     <div class="btn-group">
                       <a
                         href="bokeh-app/derivada.html"
+                        class="btn btn-outline-secondary"
+                        >View</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col calculus">
+              <div class="card shadow-sm">
+                <img
+                  class="bd-placeholder-img card-img-top"
+                  src="./images/trans-func.png"
+                  height="225px"
+                  width="100%"
+                />
+                <div class="card-body">
+                  <p class="card-text"><b>Transformación de funciones.</b> <br> Visualización de la Transformación de funciones usando traslaciones, comprensiones, dilataciones y reflexiones.</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a
+                        href="bokeh-app/trans-func.html"
                         class="btn btn-outline-secondary"
                         >View</a
                       >
