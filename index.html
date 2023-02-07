@@ -55,7 +55,7 @@
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">Bokeh Apps</h1>
             <p class="lead text-muted">
-              Colección de gráficos interactivos para visualizar conceptos matemáticos hechos con la librería Bokeh en Python. Esta página está en constante desarrollo.
+              Colección de gráficos interactivos para visualizar conceptos matemáticos hechos con la librería Bokeh en Python. <br> Esta página está en constante desarrollo.
             </p>
           </div>
         </div>
@@ -69,21 +69,28 @@
               class="btn btn-sm btn-dark"
               onclick="filterObjects('all')"
             >
-              All
+              Todas
             </button>
             <button
               type="button"
               class="btn btn-sm btn-dark"
               onclick="filterObjects('trig')"
             >
-              Trigonometry
+              Trigonometría
             </button>
             <button
               type="button"
               class="btn btn-sm btn-dark"
               onclick="filterObjects('calculus')"
             >
-              Calculus
+              Cálculo
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-dark"
+              onclick="filterObjects('linalg')"
+            >
+              Álgebra Lineal
             </button>
           </p>
 
@@ -169,13 +176,37 @@
                   width="100%"
                 />
                 <div class="card-body">
-                  <p class="card-text"><b>Transformación de funciones.</b> <br> Visualización de la Transformación de funciones usando traslaciones, comprensiones, dilataciones y reflexiones.</p>
+                  <p class="card-text"><b>Transformación de funciones.</b> <br> Visualización de la Transformación de funciones usando traslaciones, compresiones, dilataciones y reflexiones.</p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
                     <div class="btn-group">
                       <a
                         href="bokeh-app/trans-func.html"
+                        class="btn btn-outline-secondary"
+                        >View</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col linalg">
+              <div class="card shadow-sm">
+                <img
+                  class="bd-placeholder-img card-img-top"
+                  src="images/matrices.png"
+                  height="225px"
+                  width="100%"
+                />
+                <div class="card-body">
+                  <p class="card-text"><b>Transformaciones lineales</b> <br> Visualización de cómo una matriz transforma un vector en R² con expansiones, compresiones, reflexiones y cortes.</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a
+                        href="bokeh-app/matrices.html"
                         class="btn btn-outline-secondary"
                         >View</a
                       >
