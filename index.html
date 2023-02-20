@@ -92,6 +92,13 @@
             >
               Álgebra Lineal
             </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-dark"
+              onclick="filterObjects('stats')"
+            >
+              Probabilidad y Estadística
+            </button>
           </p>
 
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -207,6 +214,30 @@
                     <div class="btn-group">
                       <a
                         href="bokeh-app/matrices.html"
+                        class="btn btn-outline-secondary"
+                        >View</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col stats">
+              <div class="card shadow-sm">
+                <img
+                  class="bd-placeholder-img card-img-top"
+                  src="images/linreg.png"
+                  height="225px"
+                  width="100%"
+                />
+                <div class="card-body">
+                  <p class="card-text"><b>Regresión Lineal</b> <br> Visualización del concepto de regresión lineal, para ajustar una línea recta en unos datos minimizando el MSE.</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a
+                        href="bokeh-app/linreg.html"
                         class="btn btn-outline-secondary"
                         >View</a
                       >
